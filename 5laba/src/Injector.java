@@ -37,7 +37,6 @@ public class Injector {
 					String typeToInjectName = typeToInject.toString();
 
 					Class<?> fieldClass = Class.forName(typeToInjectName);
-					System.out.println(fieldClass.getName());
 					Object fieldInstance = fieldClass.getDeclaredConstructor().newInstance();
 					field.set(instance, fieldInstance);
 				}
